@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Тестирование первокурсников</title>
+	<meta charset='utf-8'>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" >
+
+	<link rel="shortcut icon" href="favicon.ico?v=0" />
+	<meta name="title" content="The Programming game" />
+	<meta name="description" content="Проверим твои знания алгоритмов и структур данных? ;)" />
+
+	<link href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.1/css/bootstrap.min.css" rel="stylesheet" charset="utf-8">
+	<link href="//cdnjs.cloudflare.com/ajax/libs/codemirror/4.11.0/codemirror.min.css" rel="stylesheet" type="text/css" charset="utf-8">
+	<link href="//cdnjs.cloudflare.com/ajax/libs/animate.css/3.2.0/animate.min.css" rel="stylesheet" type="text/css" charset="utf-8">
+	<link href="app.css" rel="stylesheet" type="text/css" charset="utf-8">
+	<link href="//cdnjs.cloudflare.com/ajax/libs/outdated-browser/1.0.1/outdatedBrowser.min.css" rel="stylesheet" type="text/css" charset="utf-8">
+	<script src="//cdnjs.cloudflare.com/ajax/libs/lodash.js/2.4.1/lodash.min.js"></script>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/react/0.12.2/react.js"></script>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/backbone.js/1.1.2/backbone-min.js"></script>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/backbone-react-component/0.7.3/backbone-react-component-min.js"></script>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.1/js/bootstrap.min.js"></script>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/bootbox.js/4.3.0/bootbox.min.js"></script>
+
+	<script src="//cdnjs.cloudflare.com/ajax/libs/codemirror/4.11.0/codemirror.min.js" charset="utf-8"></script>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/codemirror/4.11.0/mode/clike/clike.min.js" charset="utf-8"></script>
+</head>
+
+<body>
+	<div id="app">
+		<h1>The Programming Game</h1>
+		<p>
+		Это тестирование в 'игровой форме'. Поможет оценить твои знания в таких важных темах, как алгоритмы и структуры данных.
+
+		Для корректной работы должен быть включен JavaScript.
+		</p>
+	</div>
+
+	<script>
+		function require(name){
+			if (name == 'lodash') return _;
+			return undefined;
+		}
+	</script>
+
+	<script>
+		var levels;
+		function handleData(data) { levels = data; }
+	</script>
+
+	<script src="data/data.json"></script>
+	<script src="bundle.js" charset="utf-8"></script>
+
+	<div id="outdated">
+		<h6>Your browser is out-of-date!</h6>
+		<p>Update your browser to view this website correctly. <a id="btnUpdateBrowser" href="http://outdatedbrowser.com/">Update my browser now </a></p>
+		<p class="last"><a href="#" id="btnCloseUpdateBrowser" title="Close">&times;</a></p>
+	</div>
+	<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/outdated-browser/1.0.1/outdatedBrowser.min.js"></script>
+	<script type="text/javascript">
+			outdatedBrowser({
+				bgColor: '#f25648',
+				color: '#ffffff',
+				lowerThan: 'transform',
+				languagePath: ''
+			});
+	</script>
+
+</body>
+</html>
